@@ -18,7 +18,7 @@ export function ProjectPlate({
 }) {
   const hasImage = Boolean(project.image);
   const tone = hasImage
-    ? "border-white/15 bg-[#0b1a17] text-[#f3efe6]"
+    ? "border-white/15 bg-[#0b1220] text-[#f5f6f8]"
     : (tones[(Number(project.index) - 1) % tones.length] ?? tones[0]);
 
   return (

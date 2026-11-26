@@ -16,7 +16,6 @@ import {
   chatSuggestions,
   chatWelcome,
   findGuardrailReply,
-  findQuickReply,
   type ChatTurn,
 } from "@/lib/chatbot";
 import { cn } from "@/lib/utils";
@@ -159,11 +158,13 @@ export function ChatPanel({ open, onClose }: ChatPanelProps) {
       return;
     }
 
-    const quickReply = findGuardrailReply(text) ?? findQuickReply(text);
+    // Only block unsafe prompts locally. Normal questions go to the API so
+    // OpenRouter can answer when a key is configured.
+    const guardrailReply = findGuardrailReply(text);
     const userMessage = makeMessage("user", text);
 
-    if (quickReply) {
-      const botMessage = makeMessage("bot", quickReply);
+    if (guardrailReply) {
+      const botMessage = makeMessage("bot", guardrailReply);
       setMessages((current) => [...current, userMessage, botMessage]);
       setValue("");
 
@@ -189,17 +190,36 @@ export function ChatPanel({ open, onClose }: ChatPanelProps) {
     abortRef.current = controller;
 
     try {
-      const turns: ChatTurn[] = history
-        .slice(-CHAT_MAX_MESSAGES)
-        .map((message) => ({
-          role: message.from === "user" ? "user" : "assistant",
-          content: message.text,
-        }));
+      // Skip the welcome bubble and error toasts — OpenRouter expects the
+      // first non-system turn to be from the user, with alternating roles.
+      const turns: ChatTurn[] = [];
+
+      for (const message of history) {
+        if (message.tone === "error") {
+          continue;
+        }
+
+        if (message.from === "bot" && turns.length === 0) {
+          continue;
+        }
+
+        const role = message.from === "user" ? "user" : "assistant";
+        const previous = turns[turns.length - 1];
+
+        if (previous?.role === role) {
+          previous.content = `${previous.content}\n\n${message.text}`;
+          continue;
+        }
+
+        turns.push({ role, content: message.text });
+      }
 
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: turns }),
+        body: JSON.stringify({
+          messages: turns.slice(-CHAT_MAX_MESSAGES),
+        }),
         signal: controller.signal,
       });
       const data = (await response.json().catch(() => ({}))) as ChatApiResponse;
