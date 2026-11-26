@@ -70,6 +70,14 @@ export default function TeamPage() {
                   <p className="body-sm mt-4 max-w-[26ch] text-muted">
                     {member.focus}
                   </p>
+                  {member.email ? (
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="body-sm mt-4 inline-block text-ink transition-colors hover:text-accent"
+                    >
+                      {member.email}
+                    </a>
+                  ) : null}
                 </div>
 
                 <div className="lg:col-span-5">
