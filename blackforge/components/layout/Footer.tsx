@@ -109,6 +109,24 @@ export function Footer() {
                   Contact page
                 </Link>
               </li>
+              <li>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="text-sm text-inverse-foreground/75 transition-colors hover:text-inverse-foreground"
+                >
+                  {site.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`https://wa.me/${site.whatsapp}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-inverse-foreground/75 transition-colors hover:text-inverse-foreground"
+                >
+                  +{site.whatsapp}
+                </a>
+              </li>
               <li className="text-sm text-inverse-foreground/55">
                 Working worldwide
               </li>

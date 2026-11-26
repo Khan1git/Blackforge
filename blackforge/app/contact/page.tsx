@@ -4,6 +4,11 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 
+const whatsappHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+  "Hi BlackForge — I'd like to talk about a project.",
+)}`;
+const whatsappDisplay = `+${site.whatsapp}`;
+
 export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
@@ -78,6 +83,30 @@ export default function ContactPage() {
                 the timeline.
               </p>
               <EmailButton className="mt-6" />
+
+              <div className="mt-6 space-y-3 border-t border-line pt-5">
+                <div>
+                  <p className="label text-muted">Email</p>
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="mt-2 inline-block text-sm text-ink transition-colors hover:text-accent"
+                  >
+                    {site.email}
+                  </a>
+                </div>
+                <div>
+                  <p className="label text-muted">WhatsApp</p>
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-block text-sm text-ink transition-colors hover:text-accent"
+                  >
+                    {whatsappDisplay}
+                  </a>
+                </div>
+              </div>
+
               <p className="label mt-4 text-muted">
                 Replies within {site.responseTime}
               </p>

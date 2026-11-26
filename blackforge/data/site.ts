@@ -6,10 +6,9 @@ export const site: SiteConfig = {
   description:
     "BlackForge is an independent IT and digital agency working worldwide. We build, secure, automate, and support the systems that businesses depend on.",
   url: "https://blackforge.agency",
-  email: "arifrahman1k7@gmail.com",
-  // TODO: Replace this placeholder with the real WhatsApp business number.
-  // Use digits only, including the country code, with no plus sign or spaces.
-  whatsapp: "15551234567",
+  email: "blackforgetechologiess@gmail.com",
+  // Digits only, including country code, with no plus sign or spaces.
+  whatsapp: "923476530339",
   responseTime: "one business day",
   founded: 2019,
   nav: [
