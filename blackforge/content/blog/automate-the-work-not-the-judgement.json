@@ -1,0 +1,81 @@
+{
+  "slug": "automate-the-work-not-the-judgement",
+  "title": "Automate the work, not the judgement",
+  "excerpt": "Most failed automation projects start with a tool and work backwards. Start with a process, a decision, and a failure mode.",
+  "category": "Automation",
+  "date": "2026-06-03",
+  "author": "Arif Rahman",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Automation projects tend to fail in predictable ways. The tool is chosen before the process is understood. The demo works on clean data. Nobody defines what should happen when the model is wrong. The team keeps a shadow process because they do not trust the new one. Six months later, the licence is still being paid and the spreadsheet is still open."
+    },
+    {
+      "type": "paragraph",
+      "text": "The alternative is not complicated, but it is slower at the start. Map the process. Find the decisions. Decide which decisions can be made automatically and which need a person. Then build the smallest system that handles the first category and escalates the second."
+    },
+    {
+      "type": "heading",
+      "text": "Map the exceptions first"
+    },
+    {
+      "type": "paragraph",
+      "text": "A process map that only shows the happy path is a sales document. The useful map includes the invoice that arrives as a photo, the supplier who uses a different reference format, the customer who replies to the wrong thread. Those exceptions are where the time actually goes, and they are where automation either helps or makes things worse."
+    },
+    {
+      "type": "paragraph",
+      "text": "Take invoice processing. The straightforward invoices are rarely the problem; a trained team can process those quickly. The delay comes from missing purchase orders and mismatched totals. Automating the easy cases looks impressive and changes very little. The valuable work is routing the difficult cases to a person with the right context."
+    },
+    {
+      "type": "list",
+      "items": [
+        "What decision is being made, and by whom?",
+        "What information is required to make it correctly?",
+        "What happens today when the information is missing?",
+        "How often is the decision wrong, and what does that cost?",
+        "Can the result be checked later without redoing the work?",
+        "Who is accountable when the automation fails?"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Use confidence thresholds honestly"
+    },
+    {
+      "type": "paragraph",
+      "text": "A confidence score is not a guarantee. It is a signal that has to be calibrated against real outcomes. Build an evaluation set from historical work, run the system against it, and look at the cases where it was confidently wrong. Those are the cases that erode trust fastest."
+    },
+    {
+      "type": "paragraph",
+      "text": "Set a threshold for automatic processing. Everything below it goes to a human queue with the source material attached. Then measure how often the human changes the machine's answer. If the answer is almost never, the threshold can move. If it is often, the system needs work before it handles more volume."
+    },
+    {
+      "type": "heading",
+      "text": "Agents need a job description"
+    },
+    {
+      "type": "paragraph",
+      "text": "An agentic chatbot or an AI calling agent is not a person with a personality. It is a language model with tools, a scope, and a handoff. Write the job description before the prompt: what it can answer, what it can change, when it must stop, and who takes over."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is where n8n earns its place. The model handles the conversation; the workflow checks the calendar, writes to the CRM, sends the confirmation, and records the outcome. The model can be swapped. The business rules stay visible and testable."
+    },
+    {
+      "type": "quote",
+      "text": "The goal is not to remove people from the process. It is to stop wasting their attention on the part that does not need it."
+    },
+    {
+      "type": "heading",
+      "text": "Keep a fallback and a record"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every automated step should have a way to fail visibly and a manual path that still works. The audit trail is not optional. If a decision affects money, access, or a customer, you need to know what the system saw, what it decided, and who approved it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Automation is most useful when it is narrow, observable, and boring. It handles the repetitive work, leaves the judgement with the people who have context, and tells you when it is unsure. That is a less exciting demo than a fully autonomous workflow. It is also the version that survives contact with a real month."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "boring-infrastructure-is-a-feature",
+  "title": "Boring infrastructure is a feature",
+  "excerpt": "The most reliable systems are usually the least interesting. A case for choosing well-understood tools and writing down how they work.",
+  "category": "Engineering",
+  "date": "2026-08-27",
+  "author": "Arif Rahman",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "There is a particular kind of pride in building something novel. A custom queue, a bespoke deployment pipeline, a database choice nobody else on the team has used. It can be justified. Most of the time, it is a cost that arrives later, when the person who built it has moved on and the system needs a change at an inconvenient hour."
+    },
+    {
+      "type": "paragraph",
+      "text": "Boring infrastructure is not the absence of ambition. It is a decision about where to spend complexity. The product should be interesting to your customers. The plumbing should be unremarkable to the people who maintain it."
+    },
+    {
+      "type": "heading",
+      "text": "Every tool has a maintenance bill"
+    },
+    {
+      "type": "paragraph",
+      "text": "A tool is not just its licence fee and its first deployment. It is upgrades, security patches, monitoring, documentation, hiring, and the cost of being wrong at 2 a.m. A managed service can be more expensive on the invoice and cheaper overall if it removes a category of work your team is not staffed to do."
+    },
+    {
+      "type": "paragraph",
+      "text": "The opposite is also true. A managed service that does not fit the workflow can add more complexity than a simple tool you control. The question is not custom versus managed. It is: who will own this in eighteen months, and what will they need to know?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Can a new engineer understand this in a day?",
+        "Is there a documented upgrade path?",
+        "What happens when the vendor changes pricing or disappears?",
+        "Do we have the skills to operate it without heroics?",
+        "Is the failure mode obvious, or does it fail silently?",
+        "Would we choose this again with the information we have now?"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Write down how it works"
+    },
+    {
+      "type": "paragraph",
+      "text": "Documentation is not a PDF written once and forgotten. It is the runbook someone opens when the queue is backed up, the note that explains why the cache is configured that way, and the list of accounts that need to be rotated. If the knowledge lives only in one person's head, the system is not finished."
+    },
+    {
+      "type": "paragraph",
+      "text": "The same applies to backups. A backup that has never been restored is a hope, not a control. Test the restore. Put the result in writing. Then test it again after the infrastructure changes."
+    },
+    {
+      "type": "quote",
+      "text": "The product should be interesting to your customers. The plumbing should be unremarkable to the people who maintain it."
+    },
+    {
+      "type": "heading",
+      "text": "A simple stack is a feature"
+    },
+    {
+      "type": "paragraph",
+      "text": "Simplicity is not the same as minimalism. A simple system can have many parts if each part has one clear job and the boundaries are understood. What makes a stack complicated is unclear ownership, hidden dependencies, and changes that require a meeting to understand."
+    },
+    {
+      "type": "paragraph",
+      "text": "Before adding a new service, ask what it replaces. Before introducing a new abstraction, ask who will debug it. Before choosing the interesting option, ask whether the interesting part is the thing your customers are paying for. Often it is not, and that is fine. The work is still there. It is just quieter."
+    }
+  ]
+}

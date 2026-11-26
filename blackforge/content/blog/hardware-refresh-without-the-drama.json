@@ -1,0 +1,73 @@
+{
+  "slug": "hardware-refresh-without-the-drama",
+  "title": "A hardware refresh without the drama",
+  "excerpt": "A hardware refresh is an operations project, not a shopping list. Here is how to plan one that people actually want to use.",
+  "category": "Operations",
+  "date": "2026-05-12",
+  "author": "Arif Rahman",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "A hardware refresh usually starts with a complaint. A machine is slow, a drive is full, a laptop will not run the latest design software. The temptation is to order replacements and hand them out. That approach creates a new set of problems: inconsistent configurations, lost files, software that no longer works, and a support burden that follows the boxes through the door."
+    },
+    {
+      "type": "paragraph",
+      "text": "Treat it as an operations project. The goal is not new hardware. It is a team that can do its work without thinking about the hardware."
+    },
+    {
+      "type": "heading",
+      "text": "Audit the work, not the job titles"
+    },
+    {
+      "type": "paragraph",
+      "text": "Two people with the same title can have very different requirements. One spends the day in email and a browser. The other renders video, runs virtual machines, or works with large CAD files. Ask what the machine is asked to do, how often, and where it struggles. That gives you three or four sensible tiers instead of forty individual exceptions."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Which applications are used every day, and which are occasional?",
+        "How large are the files, and where do they live?",
+        "Does the work require a discrete GPU, a specific port, or a second screen?",
+        "How long should a machine last before it is replaced?",
+        "What is the cost of a day without it?",
+        "Which machines are still under warranty or can be upgraded?"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Standardise the build"
+    },
+    {
+      "type": "paragraph",
+      "text": "A standard build is not about removing choice. It is about making the common setup predictable. Decide on the operating system, the disk encryption, the browser, the password manager, the backup agent, and the remote support tool. Document the install order. Then test it on one machine before it reaches the whole team."
+    },
+    {
+      "type": "paragraph",
+      "text": "For a mixed Windows and Linux office, keep the same principles but separate the images. Do not assume that a dual-boot setup is what everyone wants. Ask. A clean single-boot machine with a virtual machine is often less trouble than a partition scheme nobody understands."
+    },
+    {
+      "type": "heading",
+      "text": "Migrate data before the handover"
+    },
+    {
+      "type": "paragraph",
+      "text": "The most common failure in a refresh is data migration left to the last minute. Copy the files, verify the important ones, and keep the old machine available for a week. If a team uses a shared drive, check permissions before the switch. If someone has years of local files, find them before the old drive is wiped."
+    },
+    {
+      "type": "quote",
+      "text": "The goal is not new hardware. It is a team that can do its work without thinking about the hardware."
+    },
+    {
+      "type": "heading",
+      "text": "Document, dispose, and support"
+    },
+    {
+      "type": "paragraph",
+      "text": "Record the asset, the assigned user, the build version, and the warranty date. Wipe retired drives properly and dispose of equipment through a responsible channel. Keep a spare machine or two for the inevitable failure. Then set a replacement schedule so the next refresh is a planned cost rather than an emergency."
+    },
+    {
+      "type": "paragraph",
+      "text": "A good refresh is quiet. People get a machine that works, their files are where they expect them, and the support team has a record of what was installed. Nobody talks about it at lunch, which is exactly the point."
+    }
+  ]
+}

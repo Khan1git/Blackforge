@@ -1,0 +1,80 @@
+{
+  "slug": "what-a-penetration-test-tells-you",
+  "title": "What a penetration test actually tells you",
+  "excerpt": "A penetration test is not a pass mark. It is a record of what an attacker could do on a particular day, and what you should fix first.",
+  "category": "Security",
+  "date": "2026-09-18",
+  "author": "Shakir",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "A penetration test is often bought for the wrong reason. Someone needs a certificate for procurement, a customer has asked for evidence, or a board wants reassurance before a launch. Those are legitimate reasons to commission a test, but none of them describe what a test actually produces."
+    },
+    {
+      "type": "paragraph",
+      "text": "What you get is a sample. A good tester, working within an agreed scope, for a fixed number of days, will find some of the ways an attacker could reach something that matters. The absence of a finding does not mean the absence of a weakness. It means this particular tester did not find it in the time available."
+    },
+    {
+      "type": "heading",
+      "text": "Scope is the first finding"
+    },
+    {
+      "type": "paragraph",
+      "text": "The most useful conversation happens before testing starts. Which systems are in scope? Which accounts and environments? Is this a production test or a staging test? What is out of bounds, and why? A test that avoids production because of risk is not necessarily a bad test, but the report should say so plainly."
+    },
+    {
+      "type": "paragraph",
+      "text": "A narrow scope is not a problem if it reflects the real risk. A wide scope with no priorities usually produces a long report and a short list of decisions. We would rather test the three paths that lead to patient records than spend two weeks enumerating login pages."
+    },
+    {
+      "type": "heading",
+      "text": "The report is not the deliverable"
+    },
+    {
+      "type": "paragraph",
+      "text": "A report that lists findings without owners, dates, and remediation guidance is trivia. The deliverable is a smaller attack surface. That means someone has to decide what to fix, someone has to fix it, and someone has to check that the fix holds. A retest is not an upsell; it is the part that closes the loop."
+    },
+    {
+      "type": "list",
+      "items": [
+        "A clear scope, test window, and list of exclusions",
+        "Reproducible steps, not just a severity label",
+        "The business impact of each finding in plain language",
+        "A severity rationale that explains the rating",
+        "Remediation guidance specific to your stack",
+        "A retest of the items marked as fixed"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What to ask before you buy"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Who will do the work, and what have they tested before?",
+        "How will the test be scoped, and who signs off on the scope?",
+        "Will the test touch production, and how will you protect live data?",
+        "Is remediation support included, or does the relationship end with the PDF?",
+        "Is a retest included, and what counts as fixed?",
+        "How will findings be shared during the engagement if something critical appears?"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "The goal is not a clean report. The goal is a smaller attack surface."
+    },
+    {
+      "type": "heading",
+      "text": "Fix, retest, repeat"
+    },
+    {
+      "type": "paragraph",
+      "text": "Security is a moving target. A test is a snapshot of one configuration, one release, and one set of assumptions. The organisations that get value from testing treat it as part of a cycle: test, fix, retest, change something, test again. The organisations that get less value treat it as a certificate to file."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you are commissioning your first test, start with the system that would hurt most if it were compromised. Make the scope small enough to do properly. Ask for a debrief, not just a document. Then put the fixes in the same backlog as the rest of the work, with dates and owners. That is the difference between buying a test and reducing risk."
+    }
+  ]
+}

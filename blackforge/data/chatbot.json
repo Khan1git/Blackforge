@@ -1,0 +1,60 @@
+{
+  "welcome": "Hey — I'm the BlackForge assistant. Ask me about our services, live projects, process, team, or how to get in touch.",
+  "suggestions": [
+    "What do you do?",
+    "See your work",
+    "How do I contact you?"
+  ],
+  "guardrails": [
+    {
+      "id": "prompt-injection",
+      "patterns": [
+        "\\b(ignore|disregard|forget)\\b.{0,40}\\b(previous|prior|above|system|developer)\\b.{0,20}\\b(instructions?|prompts?|rules?)\\b",
+        "\\b(system|developer|hidden)\\b.{0,12}\\b(prompt|instructions?|message)\\b",
+        "\\b(jailbreak|developer mode|dan mode|do anything now)\\b",
+        "\\b(reveal|show|print|repeat)\\b.{0,20}\\b(prompt|instructions?|rules?)\\b"
+      ],
+      "reply": "I can only help with BlackForge — our services, work, process, team, and contact details. I can't change roles, reveal internal instructions, or take unrelated requests."
+    },
+    {
+      "id": "malicious-security",
+      "patterns": [
+        "\\b(hack|breach|steal|bypass)\\b.{0,30}\\b(account|phone|password|email|girlfriend|boyfriend|ex|someone)\\b",
+        "\\b(how to hack|hack someone|hack a phone|hack an account|hack a website|ddos|take down a website)\\b"
+      ],
+      "reply": "I can only help with authorized security work. BlackForge performs scoped penetration testing and hardening under a written agreement. If that is what you need, use /contact."
+    },
+    {
+      "id": "off-topic",
+      "patterns": [
+        "\\b(weather|forecast|stock price|crypto price|homework|write my essay|do my homework|recipe|tell me a joke|movie recommendation|sports score|medical advice|legal advice)\\b"
+      ],
+      "reply": "I can only help with BlackForge — our services, projects, process, team, and how to get in touch. For anything else, please use the contact page."
+    }
+  ],
+  "quickReplies": [
+    {"id":"who-are-you","patterns":["\\b(who are you|who is this|what are you|are you a bot|are you human|what is blackforge|about blackforge|what('s| is) your name|who made you|who built you|which model|what model|are you chatgpt|are you openai|are you gpt)\\b"],"reply":"I'm the BlackForge assistant. BlackForge is an independent IT and digital agency. We build web and mobile products, secure systems, and automate work with AI and n8n."},
+    {"id":"start-project","patterns":["\\b(start a project|start project|work with you|hire you|new project|project enquiry|project inquiry|need help with a project|work together)\\b"],"reply":"Tell us what you're building, the deadline, and the constraints. The contact page is at /contact, or use the WhatsApp button. We reply within one business day."},
+    {"id":"pricing","patterns":["\\b(price|pricing|cost|costs|budget|estimate|quote|how much)\\b"],"reply":"We scope each project individually. Tell us what you are building, the deadline, and the constraints, and we will come back with an approach and estimate. Start at /contact."},
+    {"id":"experience","patterns":["\\b(how long have you been|when were you founded|founded|since when|years of experience|how old is blackforge)\\b"],"reply":"BlackForge was founded in 2019. The team has been building and securing web, mobile, AI, and automation systems since then."},
+    {"id":"timeline","patterns":["\\b(timeline|how long|duration|deadline|when can you start|start date)\\b"],"reply":"Timelines depend on scope. Discovery and planning usually take one to two weeks each; build work is scoped after that. We will give you a realistic schedule before work starts."},
+    {"id":"contact","patterns":["\\b(contact|email|e-mail|whatsapp|phone|call you|reach you|get in touch|consultation|meeting|schedule a call)\\b"],"reply":"The fastest way to reach us is the contact page at /contact or the WhatsApp button. We reply within one business day."},
+    {"id":"services","patterns":["\\b(services?|capabilities|what do you do|what can you do|what do you offer|what can you build|what do you build)\\b"],"reply":"We cover nine disciplines: cybersecurity, full-stack web development, mobile apps, AI automation and agents, SEO and AEO, content, graphic design, AI video, and hardware/IT support. The full list is on /services."},
+    {"id":"security","patterns":["\\b(cybersecurity|cyber security|security|pentest|penetration test|pen testing|hardening|vulnerability|breach|breached|secure code|threat model)\\b"],"reply":"We run scoped web, API, mobile, and network penetration tests, cloud and infrastructure reviews, secure architecture and code reviews, and remediation support. Testing is under a written scope and NDA. See /services#cybersecurity."},
+    {"id":"web-development","patterns":["\\b(website|web app|web development|next\\.?js|react|full[- ]stack)\\b"],"reply":"We design and build web products end to end: interface, API, data model, deployment, performance, accessibility, and handover. See /services#web-development."},
+    {"id":"mobile-apps","patterns":["\\b(mobile app|mobile apps|ios|android|react native|expo|app store|play store|build an app|need an app)\\b"],"reply":"We build React Native and Expo apps for iOS and Android, including offline behaviour, notifications, device integrations, store submission, and release pipelines. See /services#mobile-apps."},
+    {"id":"ai-automation","patterns":["\\b(ai automation|ai agents?|agentic|n8n|chatbots?|chat bots?|calling agents?|automations?|workflows?|rag|llms?|retrieval|ai)\\b"],"reply":"We build n8n workflows, agentic chatbots with tools and memory, AI calling agents, document extraction pipelines, and retrieval over your own data — with guardrails, evaluations, and human handoff. See /services#ai-automation."},
+    {"id":"content","patterns":["\\b(content creation|content strategy|copywriting|website copy|product copy|case studies?|technical articles?|editorial|copy)\\b"],"reply":"We write positioning, website and product copy, case studies, technical articles, and editorial systems — with a voice guide your team can actually use. See /services#content."},
+    {"id":"projects","patterns":["\\b(projects?|portfolio|case stud(y|ies)|your work|live work|menumate|central park news|cross bay|bar exam news|howard beach news|live sites?)\\b"],"reply":"We have six selected projects live, including MenuMate and five local news platforms. You can browse the work and case studies at /projects."},
+    {"id":"process","patterns":["\\b(process|how do you work|stages|steps|method|discover phase|plan phase|test and secure|launch phase|support phase)\\b"],"reply":"We work in six stages: Discover, Plan, Build, Test and secure, Launch, and Support. You get weekly written updates, working increments, and a clear handover. More at /process."},
+    {"id":"seo","patterns":["\\b(seo|aeo|search engine|google ranking|rankings?|answer engine|structured data|search visibility)\\b"],"reply":"We handle technical SEO, information architecture, structured data, answer-first content, and measurement across search and AI answer surfaces. See /services#seo-aeo."},
+    {"id":"location","patterns":["\\b(where are you|location|based|country|time zone|timezone|worldwide)\\b"],"reply":"We work worldwide. Most collaboration happens in writing, with overlapping hours for calls and decisions."},
+    {"id":"team","patterns":["\\b(team|founders?|co[- ]founders?|who works|arif|shakir|staff)\\b"],"reply":"BlackForge is run by two co-founders, Arif Rahman and Shakir. You work directly with the people doing the work — no account managers or handoffs. Meet them at /team."},
+    {"id":"it-support","patterns":["\\b(it support|hardware|pc build|computer repair|fix computer|laptops?|network|wi-?fi|windows|linux|system administration|backups?)\\b"],"reply":"We handle custom PC builds, hardware repair and diagnostics, Windows and Linux setup, system administration, backups, and small-office networking. Remote support is available worldwide. See /services#hardware-it."},
+    {"id":"video","patterns":["\\b(ai video|video|short[- ]form|reels|tiktok)\\b"],"reply":"We produce short-form video with AI-assisted generation, human direction, editing, sound, captions, and platform-specific delivery. See /services#ai-video."},
+    {"id":"design","patterns":["\\b(graphic design|design|brand|branding|identity|visual system|logo)\\b"],"reply":"We build identities and visual systems that hold up across web, print, and social, with design systems and production-ready files. See /services#design."},
+    {"id":"greeting","patterns":["^(hi|hello|hey|yo|hiya|good (morning|afternoon|evening))\\b"],"reply":"Hey — welcome to BlackForge. Ask me about our services, live work, process, team, or how to get in touch. You can also reach a person on WhatsApp."},
+    {"id":"bye","patterns":["^(bye|goodbye|see you|that's all|thats all)\\b"],"reply":"Thanks for stopping by. You can find us at /contact or on WhatsApp when you are ready."},
+    {"id":"thanks","patterns":["^(thanks|thank you|thx|appreciate it)\\b"],"reply":"Happy to help. If you want to talk through a project, use /contact or WhatsApp."}
+  ]
+}

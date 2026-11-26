@@ -1,0 +1,73 @@
+{
+  "slug": "designing-for-answer-engines",
+  "title": "Designing for answer engines",
+  "excerpt": "People increasingly ask an AI assistant before they open a search result. The basics of being cited are unglamorous: clear entities, structured facts, and pages worth quoting.",
+  "category": "Search",
+  "date": "2026-07-15",
+  "author": "Shakir",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Answer engine optimisation has become a category with its own acronym, its own conference talks, and a growing number of people selling shortcuts. The underlying work is less mysterious. It is the same work that has always made a site useful to search engines, applied to a new surface."
+    },
+    {
+      "type": "paragraph",
+      "text": "An AI assistant does not browse your homepage and absorb your brand story. It retrieves passages, checks them against other sources, and assembles an answer. If your site is ambiguous about what you do, who you serve, and what you claim, you are giving the model very little to work with."
+    },
+    {
+      "type": "heading",
+      "text": "Start with the entity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Be specific about the organisation, the product, and the people behind it. Use the same name everywhere. Link to the same canonical pages. Provide a clear description that does not change with every campaign. If you have a parent company, a trading name, or a former name, say so explicitly so a model can connect the dots."
+    },
+    {
+      "type": "paragraph",
+      "text": "Structured data helps, but it is not a substitute for clear writing. Schema markup can confirm a fact. It cannot invent one. The page still needs to say the thing."
+    },
+    {
+      "type": "heading",
+      "text": "Write pages that are worth quoting"
+    },
+    {
+      "type": "paragraph",
+      "text": "A useful answer usually contains a definition, a number, a comparison, or a step. If your page has none of those, it is unlikely to be cited. Answer-first writing does not mean dumbing down the content. It means putting the direct answer near the top, then explaining the nuance underneath."
+    },
+    {
+      "type": "list",
+      "items": [
+        "State the answer in the first paragraph, then add context",
+        "Use headings that match real questions, not internal jargon",
+        "Keep facts, dates, and figures on the page, not only in a PDF",
+        "Cite primary sources and link to them",
+        "Show who wrote the page and when it was last reviewed",
+        "Keep one canonical page per topic instead of five competing versions"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Measure what you can"
+    },
+    {
+      "type": "paragraph",
+      "text": "AI answer surfaces are not yet as measurable as traditional search. You can still track branded search, referral traffic from assistants, citations in the answers you can inspect, and the questions your sales team hears. None of those is a perfect metric. Together they tell you whether the work is moving in the right direction."
+    },
+    {
+      "type": "quote",
+      "text": "AEO is not a trick. It rewards clear entities, verifiable facts, and pages that are worth quoting."
+    },
+    {
+      "type": "heading",
+      "text": "The unglamorous part"
+    },
+    {
+      "type": "paragraph",
+      "text": "The biggest gains usually come from maintenance: removing duplicate pages, fixing broken internal links, updating outdated claims, and giving a named person responsibility for each important topic. That work does not fit neatly into a launch campaign, but it is what makes a site legible over time."
+    },
+    {
+      "type": "paragraph",
+      "text": "Start with ten pages that matter commercially. Make them unambiguous, sourced, and easy to quote. Then measure whether the questions you hear from customers start to match the pages you have built. That is a better use of the next quarter than chasing every new tool that promises to game the answer."
+    }
+  ]
+}
