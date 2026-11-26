@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { ChatError, createChatReply, parseChatRequest } from "@/lib/chat";
 import { checkRateLimit } from "@/lib/rate-limit";
 
-export const runtime = "nodejs";
 export const maxDuration = 60;
 
 const NO_STORE_HEADERS = {
