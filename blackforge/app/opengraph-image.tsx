@@ -17,8 +17,8 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#f3efe6",
-          color: "#10201d",
+          backgroundColor: "#f5f6f8",
+          color: "#0b1220",
           padding: "60px 72px",
         }}
       >
@@ -48,14 +48,14 @@ export default function OpenGraphImage() {
             }}
           >
             <span>Innovate.</span>
-            <span style={{ color: "#0f6b5e" }}>Build. Secure.</span>
+            <span style={{ color: "#1e40af" }}>Build. Secure.</span>
           </div>
           <div
             style={{
               display: "flex",
               fontSize: 28,
               lineHeight: 1.4,
-              color: "#5c655f",
+              color: "#5a6475",
               maxWidth: 820,
             }}
           >
@@ -68,12 +68,12 @@ export default function OpenGraphImage() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            borderTop: "1px solid #d3c9b8",
+            borderTop: "1px solid #d1d5de",
             paddingTop: 22,
             fontSize: 18,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#5c655f",
+            color: "#5a6475",
           }}
         >
           <span>blackforge.agency</span>

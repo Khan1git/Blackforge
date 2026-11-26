@@ -21,50 +21,50 @@
 /* Light theme ------------------------------------------------------------- */
 :root {
   color-scheme: light;
-  --background: #f3efe6;
-  --surface: #e9e2d4;
-  --surface-strong: #ddd4c3;
-  --foreground: #10201d;
-  --muted: #5c655f;
-  --line: #d3c9b8;
-  --accent: #0f6b5e;
-  --accent-contrast: #f8f4ea;
-  --highlight: #e4a93f;
-  --inverse: #0b1a17;
-  --inverse-foreground: #f3efe6;
+  --background: #f5f6f8;
+  --surface: #eaecf0;
+  --surface-strong: #dee1e7;
+  --foreground: #0b1220;
+  --muted: #5a6475;
+  --line: #d1d5de;
+  --accent: #1e40af;
+  --accent-contrast: #f8fafc;
+  --highlight: #ea580c;
+  --inverse: #0b1220;
+  --inverse-foreground: #f5f6f8;
 }
 
 /* Dark theme -------------------------------------------------------------- */
 [data-theme="dark"] {
   color-scheme: dark;
-  --background: #081210;
-  --surface: #0f1d19;
-  --surface-strong: #162822;
-  --foreground: #eef1e8;
-  --muted: #9aa7a0;
-  --line: #24352f;
-  --accent: #6fd6c3;
-  --accent-contrast: #081210;
-  --highlight: #e9b95d;
-  --inverse: #eef1e8;
-  --inverse-foreground: #081210;
+  --background: #070a10;
+  --surface: #10151f;
+  --surface-strong: #171d2a;
+  --foreground: #e8eaf0;
+  --muted: #94a0b4;
+  --line: #252b3a;
+  --accent: #60a5fa;
+  --accent-contrast: #070a10;
+  --highlight: #fb923c;
+  --inverse: #e8eaf0;
+  --inverse-foreground: #070a10;
 }
 
 /* System preference before the theme script runs (or without JavaScript). */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --background: #081210;
-    --surface: #0f1d19;
-    --surface-strong: #162822;
-    --foreground: #eef1e8;
-    --muted: #9aa7a0;
-    --line: #24352f;
-    --accent: #6fd6c3;
-    --accent-contrast: #081210;
-    --highlight: #e9b95d;
-    --inverse: #eef1e8;
-    --inverse-foreground: #081210;
+    --background: #070a10;
+    --surface: #10151f;
+    --surface-strong: #171d2a;
+    --foreground: #e8eaf0;
+    --muted: #94a0b4;
+    --line: #252b3a;
+    --accent: #60a5fa;
+    --accent-contrast: #070a10;
+    --highlight: #fb923c;
+    --inverse: #e8eaf0;
+    --inverse-foreground: #070a10;
   }
 }
 

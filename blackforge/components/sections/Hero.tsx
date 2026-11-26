@@ -105,54 +105,56 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mt-12 overflow-hidden border-y border-white/15 bg-[#0b1a17]">
-            <img
-              src={visuals.hero}
-              alt=""
-              aria-hidden="true"
-              loading="eager"
-              decoding="async"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-[#0b1a17]/75"
-            />
-            <div
-              aria-hidden="true"
-              className="grid-field pointer-events-none absolute inset-0 text-[#f3efe6] opacity-20"
-            />
+          <Reveal delay={200}>
+            <div className="relative mt-12 overflow-hidden border border-line bg-[#0b1220] md:mt-14">
+              <img
+                src={visuals.hero}
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+                decoding="async"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-[#0b1220]/78"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-linear-to-t from-[#0b1220] via-[#0b1220]/55 to-[#0b1220]/35"
+              />
+              <div
+                aria-hidden="true"
+                className="grid-field pointer-events-none absolute inset-0 text-white opacity-[0.12]"
+              />
 
-            <div className="relative grid md:grid-cols-3">
-              {pillars.map((pillar, index) => (
-                <Link
-                  key={pillar.title}
-                  href={pillar.href}
-                  className={cn(
-                    "group flex flex-col justify-between gap-8 py-6 text-[#f3efe6] transition-colors hover:bg-white/5 md:px-6",
-                    index > 0 && "border-t border-white/15 md:border-t-0 md:border-l",
-                    index === 0 && "md:pl-0",
-                    index === pillars.length - 1 && "md:pr-0",
-                  )}
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="label text-[#e4a93f]">
-                      {pillar.index}
-                    </span>
-                    <ArrowIcon className="text-[#f3efe6]/55 transition-transform group-hover:translate-x-1 group-hover:text-[#6fd6c3]" />
-                  </div>
-                  <div>
-                    <h2 className="font-display text-3xl font-semibold leading-none tracking-[-0.05em] transition-colors group-hover:text-[#6fd6c3]">
-                      {pillar.title}
-                    </h2>
-                    <p className="body-sm mt-3 max-w-[30ch] text-[#f3efe6]/65">
-                      {pillar.summary}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+              <div className="relative grid gap-4 p-5 sm:gap-5 sm:p-6 md:grid-cols-3 md:gap-5 md:p-8 lg:p-10">
+                {pillars.map((pillar) => (
+                  <Link
+                    key={pillar.title}
+                    href={pillar.href}
+                    className={cn(
+                      "group flex min-h-[15rem] flex-col justify-between gap-10 border border-white/15 bg-white/[0.04] p-6 text-white backdrop-blur-[2px] transition-all duration-300",
+                      "hover:border-white/30 hover:bg-white/[0.08] md:min-h-[16.5rem] md:p-7",
+                    )}
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="label text-highlight">{pillar.index}</span>
+                      <ArrowIcon className="text-white/50 transition-transform group-hover:translate-x-1 group-hover:text-accent" />
+                    </div>
+                    <div>
+                      <h2 className="font-display text-3xl font-semibold leading-none tracking-[-0.05em] transition-colors group-hover:text-accent">
+                        {pillar.title}
+                      </h2>
+                      <p className="body-sm mt-3 max-w-[30ch] text-white/65">
+                        {pillar.summary}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
 
